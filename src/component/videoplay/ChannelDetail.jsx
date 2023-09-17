@@ -24,7 +24,6 @@ function ChannelDetail({ videoId, channelId }) {
 
   useEffect(() => {
     fetchVideo(url).then((data) => {
-      console.log("channel data", data.items[0]);
       setDetailData(data.items[0]);
     });
     //eslint-disable-next-line
@@ -33,7 +32,6 @@ function ChannelDetail({ videoId, channelId }) {
   useEffect(() => {
     if (channelId) {
       fetchVideo(chanelUrl).then((data) => {
-        console.log("channel details", data.items[0]);
         setProfileDetail(data.items[0]);
       });
     }

@@ -24,7 +24,6 @@ function Videos() {
   };
   useEffect(() => {
     fetchVideo(initailUrl).then((data) => {
-      console.log(data);
       setPageToken(data.nextPageToken);
       setVideos(data.items);
     });

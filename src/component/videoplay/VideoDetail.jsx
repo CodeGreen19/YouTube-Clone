@@ -19,7 +19,6 @@ function VideoDetail() {
   // to fetch suggested video and stored in a state
   useEffect(() => {
     fetchVideo(url).then((data) => {
-      console.log("suggested data", data);
       setSuggestedVideos(data.items);
     });
     //eslint-disable-next-line
@@ -28,7 +27,6 @@ function VideoDetail() {
   // to fetch channel id and store in a state
   useEffect(() => {
     fetchVideo(channelUrl).then((data) => {
-      console.log("channel data", data.items[0]);
       setChannelId(data.items[0].snippet?.channelId);
     });
     //eslint-disable-next-line

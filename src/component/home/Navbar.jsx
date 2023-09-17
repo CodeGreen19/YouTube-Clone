@@ -31,7 +31,6 @@ function Navbar() {
       fetchVideo(url).then((data) => {
         setPageToken(data.nextPageToken);
         setVideos(data.items);
-        console.log("items", data);
       });
     }
   };

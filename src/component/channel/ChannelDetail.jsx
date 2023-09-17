@@ -37,8 +37,8 @@ function ChannelDetail() {
   };
   useEffect(() => {
     fetchVideo(url).then((data) => {
-      console.log("channel data", data);
       setPageInfo(data.pageInfo);
+
       setNextPage(data.nextPageToken);
       setChannelVideos(data.items);
     });
@@ -46,11 +46,11 @@ function ChannelDetail() {
   }, [url]);
   useEffect(() => {
     fetchVideo(profileUrl).then((data) => {
-      console.log("channel profile data", data);
       setProfileInfo(data.items[0]);
     });
     //eslint-disable-next-line
   }, [profileUrl]);
+
   return (
     <Fragment>
       <Navbar />
@@ -86,7 +86,7 @@ function ChannelDetail() {
           margin: "20px 0",
         }}
       >
-        {pageInfo && pageInfo.totalResults > channelVideos.length ? (
+        {pageInfo && pageInfo.totalResults - channelVideos.length > 30 ? (
           <button className="seeMore" onClick={handleSeeMore}>
             See More
           </button>

@@ -1,38 +1,228 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Navbar................... */
+
+.Navbar {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 80px 0px 30px;
+  background-color: rgb(255, 255, 255);
+  z-index: 10;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Navbar > .mainLogo {
+  width: 90px;
+  cursor: pointer;
+}
+.Navbar > .mainLogo > img {
+  width: 100%;
+  position: relative;
+}
+.Navbar.darkMode > .mainLogo > img {
+  background-color: white;
+  border-radius: 16px;
+  border: 1px solid blue;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.searchBox {
+  width: 75%;
+  height: 5vh;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50px;
+  box-shadow: 0px 0px 1px blue;
+}
+.searchBox > input {
+  width: 100%;
+  height: 100%;
+
+  border: none;
+
+  outline: none;
+  padding: 0 20px;
+  font-size: 1.05rem;
+  font-family: "Croissant One", cursive;
+  background-color: #f6fbff !important;
+}
+.searchBox > button {
+  position: absolute;
+  height: 100%;
+  background: transparent;
+  right: 0;
+  top: 0;
+  width: 60px;
+  margin: auto;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  background-color: rgb(11, 0, 164);
+  color: white;
+}
+.searchBox > button:hover {
+  background-color: rgb(9, 0, 130);
+}
+
+.nightMode > button {
+  outline: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.mainSearchInput.darkMode {
+  background-color: #474747 !important;
+}
+/* videoCard ........................... */
+
+.videoCard,
+.channelCard {
+  height: 290px;
+  width: 380px;
+  border: 1px solid rgba(0, 0, 255, 0.275);
+  border-radius: 10px;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: black;
+  background-color: aliceblue;
+}
+.videoCard:hover,
+.channelCard:hover {
+  background-color: rgb(223, 237, 249);
+}
+.videoCard.darkMode,
+.channelCard.darkMode {
+  background-color: rgb(65, 65, 65);
+}
+.videoCard.darkMode:hover,
+.channelCard.darkMode:hover {
+  background-color: rgb(55, 55, 55);
+}
+
+.videoCard > .imageBox {
+  height: 73%;
+  width: 100%;
+  border: 1px solid rgba(0, 0, 255, 0.278);
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.imageBox > img {
+  width: 100%;
+  align-self: center;
+}
+.videoCard > .videoText {
+  height: 27%;
+  width: 100%;
+  border-radius: 5px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.videoCard > .videoText > p {
+  color: rgb(70, 70, 70);
+  text-align: center;
+  font-size: 0.8rem;
+}
+.videoCard.darkMode > .videoText > p {
+  color: rgb(209, 209, 209);
+}
+.videoCard > .videoText > .channelName {
+  font-size: 0.9rem;
+}
+.videoCard.darkMode > .videoText > .channelName {
+  color: rgb(235, 235, 235);
+}
+.videoCard > .videoText > div {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.videoCard > .videoText > div > svg {
+  color: rgb(133, 133, 133);
+  font-size: 0.8rem;
+  margin: 3px;
+}
+/* channel card .............*/
+.channelCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.channelCard > .channelImageBox {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid rgb(199, 199, 250);
+}
+.channelCard > .channelImageBox > img {
+  width: 100%;
+}
+.channelCard > .channelText {
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.App-link {
-  color: #61dafb;
+.channelCard > .channelText > svg {
+  color: rgb(133, 133, 133);
+  font-size: 0.9rem;
+  margin: 3px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (max-width: 660px) {
+  .Navbar {
+    padding: 10px;
+    height: 5vh;
   }
-  to {
-    transform: rotate(360deg);
+  .Navbar > .mainLogo {
+    width: 70px;
+  }
+  .searchBox {
+    height: 4vh;
+    margin: 5px;
+  }
+  .searchBox > input {
+    font-size: 0.9rem;
+  }
+  .searchBox > button {
+    width: 40px;
+  }
+  .searchBox > button svg {
+    font-size: 0.9rem;
+  }
+  .nightMode > button svg {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 810px) {
+  .videoCard {
+    height: 75vmin;
+    width: 95%;
+  }
+
+  .videoCard > .imageBox {
+    height: 69.5%;
+  }
+}
+@media screen and (max-width: 510px) {
+  .videoCard > .videoText > p {
+    margin-bottom: 3px;
+    margin: unset;
+  }
+  .videoCard > .videoText > .channelName {
+    font-size: 0.9rem;
+    margin: unset;
   }
 }

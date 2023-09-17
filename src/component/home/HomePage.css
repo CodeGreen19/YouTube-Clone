@@ -1,0 +1,136 @@
+.sideOrVideoContainer {
+  display: flex;
+  align-items: top;
+  justify-content: flex-start;
+}
+.infinite-scroll-component__outerdiv {
+  width: 81%;
+}
+
+.infinite-scroll-component {
+  width: 100%;
+  display: flex;
+  align-items: top;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  width: 100%;
+}
+
+.infinite-scroll-component::-webkit-scrollbar {
+  display: none;
+}
+
+.sideBar {
+  width: 19%;
+  height: 91vh;
+  position: sticky;
+  top: 9vh;
+  left: 0px;
+  overflow-y: scroll;
+}
+.sideBar.darkMode {
+  background-color: rgb(34, 34, 34);
+}
+.sideBar::-webkit-scrollbar {
+  width: 8px;
+}
+.sideBar::-webkit-scrollbar-track {
+  display: none;
+}
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: rgb(0, 0, 0);
+}
+::-webkit-scrollbar-thumb {
+  background: #000dfbd3;
+  border-radius: 15px;
+}
+
+.sideBar ul {
+  margin: 0 15px;
+}
+.sideBar ul li {
+  background-color: rgb(219, 233, 246);
+  margin-bottom: 8px;
+  border-radius: 25px;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  cursor: pointer;
+  color: rgb(63, 63, 63);
+}
+.sideBar.darkMode ul li {
+  background-color: rgb(76, 76, 76);
+  color: rgb(219, 219, 219);
+}
+.sideBar ul li:hover {
+  background-color: rgb(209, 227, 244);
+}
+.sideBar.darkMode ul li:hover {
+  background-color: rgb(0, 0, 0);
+}
+.sideBar ul li svg {
+  margin-left: 10px;
+  margin-right: 15px;
+}
+
+@media screen and (max-width: 1000px) {
+  .sideOrVideoContainer {
+    display: flex;
+    align-items: top;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .infinite-scroll-component__outerdiv {
+    width: 100%;
+  }
+
+  .sideBar {
+    width: 100%;
+    height: 6vh;
+    position: sticky;
+    top: 7.5vh;
+    left: 0px;
+    overflow-y: scroll;
+    background-color: white;
+    margin: auto;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+  }
+
+  .sideBar ul {
+    margin: 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 95%;
+    margin: auto;
+    overflow-x: scroll;
+  }
+  .sideBar ul li svg {
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 0.9rem;
+  }
+
+  .sideBar::-webkit-scrollbar {
+    display: none;
+  }
+  .sideBar ul::-webkit-scrollbar {
+    display: none;
+  }
+  .sideBar ul li {
+    background-color: rgb(232, 244, 255);
+    margin: 4px;
+    border-radius: 25px;
+    padding: 5px 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 3px 8px;
+  }
+}

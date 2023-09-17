@@ -79,14 +79,14 @@ function ChannelDetail() {
       </div>
       <div
         style={{
-          width: "99vw",
+          width: "95vw",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
           margin: "20px 0",
         }}
       >
-        {pageInfo && pageInfo.totalResults - channelVideos.length > 30 ? (
+        {pageInfo && pageInfo.totalResults - channelVideos.length !== 1 ? (
           <button className="seeMore" onClick={handleSeeMore}>
             See More
           </button>

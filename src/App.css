@@ -157,6 +157,9 @@
   align-items: center;
   justify-content: center;
 }
+.channelCard.darkMode {
+  color: white;
+}
 .channelCard > .channelImageBox {
   height: 200px;
   width: 200px;

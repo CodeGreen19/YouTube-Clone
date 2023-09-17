@@ -29,6 +29,11 @@ function Videos() {
     });
     //eslint-disable-next-line
   }, []);
+  useEffect(() => {
+    window.addEventListener("load", () => {
+      window.scrollTo(0, 0);
+    });
+  }, []);
 
   return (
     <InfiniteScroll

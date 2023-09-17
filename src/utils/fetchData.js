@@ -6,7 +6,7 @@ export const fetchVideo = async (url) => {
     url: `${url}`,
 
     headers: {
-      "X-RapidAPI-Key": "e439740084msh6e426929f396e3bp1226d6jsnd4ce65bb2edb",
+      "X-RapidAPI-Key": "f3304bd9dfmsh69d9aa64e1e2b2bp1586a2jsn20e0bc026ffd",
       "X-RapidAPI-Host": "youtube-v31.p.rapidapi.com",
     },
   };

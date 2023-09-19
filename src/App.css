@@ -16,17 +16,26 @@
 }
 
 .Navbar > .mainLogo {
-  width: 90px;
+  width: 85px;
   cursor: pointer;
+}
+.Navbar.darkMode > .mainLogo {
+  width: 85px;
 }
 .Navbar > .mainLogo > img {
   width: 100%;
   position: relative;
+  background-color: white;
+  border-radius: 6px;
+  padding: 3px;
+  padding-left: 5px;
+  box-shadow: 0px 0px 2px blue;
 }
 .Navbar.darkMode > .mainLogo > img {
   background-color: white;
-  border-radius: 16px;
-  border: 1px solid blue;
+  border-radius: 6px;
+  padding: 2px;
+  padding-left: 5px;
 }
 
 .searchBox {
@@ -36,33 +45,32 @@
   overflow: hidden;
   border-radius: 50px;
   box-shadow: 0px 0px 1px blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .searchBox > input {
-  width: 100%;
+  flex-grow: 1;
   height: 100%;
-
   border: none;
-
   outline: none;
-  padding: 0 20px;
   font-size: 1.05rem;
+  padding: 0 15px;
   font-family: "Croissant One", cursive;
   background-color: #f6fbff !important;
 }
 .searchBox > button {
-  position: absolute;
-  height: 100%;
-  background: transparent;
-  right: 0;
-  top: 0;
   width: 60px;
-  margin: auto;
+  border-radius: 50px;
   border: none;
   border-radius: 50px;
   cursor: pointer;
   background-color: rgb(11, 0, 164);
   color: white;
+  height: 100%;
+  border: 1px solid rgb(97, 97, 97);
 }
+
 .searchBox > button:hover {
   background-color: rgb(9, 0, 130);
 }
@@ -183,35 +191,6 @@
   margin: 3px;
 }
 
-@media screen and (max-width: 660px) {
-  .Navbar {
-    padding: 10px;
-    height: 5vh;
-  }
-  .Navbar > .mainLogo {
-    width: 70px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .searchBox {
-    height: 4vh;
-    margin: 5px;
-  }
-  .searchBox > input {
-    font-size: 0.9rem;
-  }
-  .searchBox > button {
-    width: 40px;
-  }
-  .searchBox > button svg {
-    font-size: 0.9rem;
-  }
-  .nightMode > button svg {
-    font-size: 0.9rem;
-  }
-}
-
 @media screen and (max-width: 810px) {
   .videoCard {
     height: 75vmin;
@@ -222,7 +201,51 @@
     height: 69.5%;
   }
 }
+@media screen and (max-width: 660px) {
+  .searchBox > input {
+    padding: 0 7px;
+    font-size: 0.9rem;
+  }
+
+  .videoCard {
+    height: 75vmin;
+    width: 95%;
+  }
+  .Navbar {
+    padding: 10px;
+    height: 5vh;
+  }
+  .Navbar > .mainLogo {
+    width: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .Navbar.darkMode > .mainLogo {
+    width: 65px;
+  }
+  .searchBox {
+    height: 4vh;
+    margin: 5px;
+  }
+
+  .searchBox > button svg {
+    font-size: 0.9rem;
+  }
+  .nightMode > button svg {
+    font-size: 0.9rem;
+  }
+}
+
 @media screen and (max-width: 510px) {
+  .searchBox > input {
+    flex-grow: 1;
+    border-radius: 50px;
+    width: 78%;
+  }
+  .searchBox > button {
+    width: 50px;
+  }
   .videoCard > .videoText > p {
     margin-bottom: 3px;
     margin: unset;

@@ -75,9 +75,6 @@ function Navbar() {
         </button>
       </div>
     </div>
-    // <div className="Navigation" style={{ position: "sticky", top: "0" }}>
-    //   navbar
-    // </div>
   );
 }
 

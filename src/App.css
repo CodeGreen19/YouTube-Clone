@@ -58,6 +58,7 @@
   padding: 0 15px;
   font-family: "Croissant One", cursive;
   background-color: #f6fbff !important;
+  border-radius: 50px;
 }
 .searchBox > button {
   width: 60px;

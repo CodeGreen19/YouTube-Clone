@@ -22,3 +22,6 @@ YouTube 2.0 is a simplified clone of the popular video-sharing platform, created
 - **Deploy:** This Project is deployed onrender.com.
 - **Link to Project:** [(https://codegreen-youtube.onrender.com/)](https://codegreen-youtube.onrender.com)
 - How to reach me **codegreen19s@gmail.com**
+
+## Portfolio
+- **My Portfolio:** [https://codegreen-portfolio.onrender.com/](https://codegreen-portfolio.onrender.com/)

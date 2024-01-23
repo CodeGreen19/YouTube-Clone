@@ -17,6 +17,7 @@ YouTube 2.0 is a simplified clone of the popular video-sharing platform, created
 - **Rapid API:** Fetches YouTube video data for seamless integration.
 - **React Js:** A Javascript Library for making better user experience .
   
+## Deploy
 
 - **Deploy:** This Project is deployed onrender.com.
 - **Link to Project:** [(https://codegreen-youtube.onrender.com/)](https://codegreen-youtube.onrender.com)
